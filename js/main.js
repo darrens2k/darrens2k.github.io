@@ -5,7 +5,11 @@ var counter3 = 0;
 var counter4 = 0;
 var counter5 = 0;
 // Defining arrays to store users times, each one is seeded with 2 elements b/c the leveltimes function needs an array of atleast 2 elements
-var level1array = [1000, 1000];
+if(localStorage.getItem('textValues') == null) {
+    var level1array = [1000, 1000];
+} else {
+    level1array = JSON.parse(localStorage.getItem('textValues')
+}
 var level2array = [1000, 1000];
 var level3array = [1000, 1000];
 var level4array = [1000, 1000];
@@ -186,6 +190,7 @@ function button() {
         // sends the time taken to the level 1 array
         level1array.push(parseInt((new Date() - start) / 1000));
         // calls the leveltimes function to update the fastest time for each level with new level time from user
+        localStorage.setItem('textvalues', JSON.stringify(level1array);
         leveltimes();
         // resets the counter variable to 0
         counter = 0;
