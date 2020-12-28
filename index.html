@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Reaction Game</title>
+        <link rel="stylesheet" type="text/css" href="main.css" title="style"/>
+        <!-- Script to allow the use of jQuery in JavaScript -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <!-- Timer to measure how long user takes on each level -->
+        <p id="timer">0s</p>
+        <!-- Instructions of the game to be displayed -->
+        <h2 id="instructions">Welcome to my reaction game! Click the button as fast as you can as it moves around the screen, each level makes button smaller, select a level to begin! Note that the timer begins counting as soon as a level is clicked.</h2>
+        <!-- Buttons to represent each level with onclick functions -->
+        <div class="buttons">
+            <button id="level1" onclick="level1()">Level 1</button>
+            <button id="level2" onclick="level2()">Level 2</button>
+            <button id="level3" onclick="level3()">Level 3</button>
+            <button id="level4" onclick="level4()">Level 4</button>
+            <button id="level5" onclick="level5()">Level 5</button>
+        </div>
+        <!-- A leaderboard that is visible to users -->
+        <div id="leaderboard">
+            <h4>Leaderboards</h4>
+            <p id="level1leader"></p>
+            <p id="level2leader"></p>
+            <p id="level3leader"></p>
+            <p id="level4leader"></p>
+            <p id="level5leader"></p>
+        </div>
+        <!-- This div contains the buttons that each level will use, there are multiple becauese each one will have a 
+        slightly different onclick function -->
+        <div class="sqaure">
+            <img src="sqaure.png" id="sqaure" alt="Sqaure Image" onclick="button()"/>
+            <img src="sqaure.png" id="sqaure2" alt="Sqaure Image" onclick="button2()"/>
+            <img src="sqaure.png" id="sqaure3" alt="Sqaure Image" onclick="button3()"/>
+            <img src="sqaure.png" id="sqaure4" alt="Sqaure Image" onclick="button4()"/>
+            <img src="sqaure.png" id="sqaure5" alt="Sqaure Image" onclick="button5()"/>
+        </div>
+        <!-- This is the output to be shown to the user upon completion of a level, it is dynamically updated -->
+        <div id="output">
+            <p>Level Completed! Time taken: </p>
+            <p id="time"></p>
+            <p><button id="next" onclick="next()">Continue</button></p>
+        </div>
+    </body>
+</html>
