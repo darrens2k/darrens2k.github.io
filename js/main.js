@@ -5,11 +5,7 @@ var counter3 = 0;
 var counter4 = 0;
 var counter5 = 0;
 // Defining arrays to store users times, each one is seeded with 2 elements b/c the leveltimes function needs an array of atleast 2 elements
-if(localStorage.getItem('textValues') == null) {
-    var level1array = [1000, 1000];
-} else {
-    level1array = JSON.parse(localStorage.getItem('textValues')
-}
+var level1array = [1000, 1000];
 var level2array = [1000, 1000];
 var level3array = [1000, 1000];
 var level4array = [1000, 1000];
